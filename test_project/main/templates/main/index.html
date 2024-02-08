@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Данный сервис был разработан для демонстрации моих навыков работы с Python, Django и Scrapy. Этот сервис собирает данные с сайта Кинопоиск по различным параметрам и затем отображает их здесь. Для того, чтобы отобразить желаемую подборку, укажите желаемые параметры и нажмите на кнопку "Подобрать фильмы"</p>
+        <button type="button" class="btn btn-outline-primary">Подобрать фильмы</button>
+
+        {% for el in values %}
+            <p>{{ el }}</p>
+        {% endfor %}
+
+    </div>
+{% endblock %}
