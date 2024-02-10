@@ -1,0 +1,55 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Сервис для подборки фильмов
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Сервис для подборки фильмов</h1>
+        <p>Данный сервис был разработан для демонстрации моих навыков работы с Python, Django и BeautifulSoup. Этот сервис собирает данные с сайта Киноафиша по различным параметрам, затем случайным образом отбирает несколько фильмов и отображает их на сайте. Для того, чтобы отобразить желаемую подборку, укажите желаемые параметры и нажмите на кнопку "Подобрать фильмы"</p>
+        <form method="post">
+            {% csrf_token %}
+            <label for="genre">Выберите жанр:</label>
+            <select id="genre" name="genre" class="form-select" style="width:300px;">
+                <option value="default">Любой</option>
+                <option value="animation">Анимация</option>
+                <option value="anime">Аниме</option>
+                <option value="action">Боевик</option>
+                <option value="detective">Детектив</option>
+                <option value="thriller">Триллер</option>
+                <option value="horror">Ужасы</option>
+            </select>
+            <button type="submit" class="btn btn-outline-primary">Подобрать фильмы</button>
+        </form>
+        <div class="movielist">
+            <div class="movie">
+                <a href="{{ hrefs.0 }}"><img src="{{ images.0 }}"></a>
+                <div class="movieinfo" align="left">
+                    <a href="{{ hrefs.0 }}"><div class="moviename">{{ movies.0 }}</div></a>
+                    <div class="moviedesc">{{ genre.0 }}</div>
+                    <div class="moviedesc">{{ year.0 }}</div>
+                    <div class="moviedesc">{{ rating.0 }}</div>
+                </div>
+            </div>
+            <div class="movie">
+                <a href="{{ hrefs.1 }}"><img src="{{ images.1 }}"></a>
+                <div class="movieinfo" align="left">
+                    <a href="{{ hrefs.1 }}"><div class="moviename">{{ movies.1 }}</div></a>
+                    <div class="moviedesc">{{ genre.1 }}</div>
+                    <div class="moviedesc">{{ year.1 }}</div>
+                    <div class="moviedesc">{{ rating.1 }}</div>
+                </div>
+            </div>
+            <div class="movie">
+                <a href="{{ hrefs.2 }}"><img src="{{ images.2 }}"></a>
+                <div class="movieinfo" align="left">
+                    <a href="{{ hrefs.2 }}"><div class="moviename">{{ movies.2 }}</div></a>
+                    <div class="moviedesc">{{ genre.2 }}</div>
+                    <div class="moviedesc">{{ year.2 }}</div>
+                    <div class="moviedesc">{{ rating.2 }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
