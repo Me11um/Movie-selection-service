@@ -12,11 +12,11 @@
 
 
 ## О проекте
-<!--<div align="center">
-<img src="Screenshots/Screenshot1.jpg" width="200" />
-<img src="Screenshots/Demo.gif" width="200" />
-<img src="Screenshots/Screenshot2.jpg" width="200" />
-</div>-->
+<img align="center" src="Screenshots/Demo.gif" width="400" />
+<div align="center">
+<img src="Screenshots/Screenshot1.jpg" width="300" />
+<img src="Screenshots/Screenshot2.jpg" width="300" />
+</div>
 
 Приложение создано на языке Python.
 Данное приложение позволяет выбрать жанр нужных фильмов, после чего предоставляет пользователю 3 случайных фильма с сайта Киноафиша, которые парсятся при помощи BeautifulSoup.
