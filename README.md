@@ -13,7 +13,7 @@
 
 ## О проекте
 <div align="center">
-<img src="Screenshots/Demo.gif" width="900" />
+<img src="Screenshots/Demo2.gif" width="900" />
   <hr>
 <img src="Screenshots/Screenshot2.png" width="900" />
 </div>
